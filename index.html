@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/signin.css" />
+    <script src="js/User.js"></script>
+    <script src="js/database/Database.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+
+<body>
+    <div id="login_container">
+        <form class="form-signin">
+            <img id="imgthumb1" class="mb-4" src="./images/thumb_logo.png" alt="" width="72" height="57">
+            <h1 id="title1" class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <div class="checkbox mb-3">
+                <label>
+                <input id="remember_me" type="checkbox" value="remember-me"> Remember me
+            </label>
+            </div>
+            <span id="buttonSignIn" class="btn btn-lg btn-primary btn-block">Sign in</span>
+        </form>
+    </div>
+    <div id="todolist_container">
+
+        <header>
+            <!-- Fixed navbar -->
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="#">TodoList C.D</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                    <div class="form-inline mt-2 mt-md-0">
+                        <span id="email_user_logged"></span>
+                        <button id="btnExit" class="btn btn-light">Exit</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Begin page content -->
+        <main role="main">
+            <div class="container">
+
+                <div id="containerAddTodo" class="form-inline mb-5">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="input_todo" placeholder="Write your todo">
+                    </div>
+                    <button id="buttonAddTodo" class="btn btn-primary mt-3">Add</button>
+                </div>
+
+                <ul id="ul_todo_list" class="list-group">
+                    <li id="li_item_to_clone" class="list-group-item">
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input checkbox-todo-list">
+                            <label class="form-check-label label-todo-list"></label>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </main>
+
+
+
+    </div>
+</body>
+
+</html>
